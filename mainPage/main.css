@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+body {
+    background: rgb(19,163,255);
+    background: linear-gradient(100deg, rgba(19,163,255,1) 0%, rgba(0, 251, 255, 0.675) 41%, rgba(0, 251, 255, 0.812) 100%);
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(0, 0, 0);
+    width: 90%;
+}
+
+
+
+
+
+section {
+    width: 100%;
+    min-height: 700px;
+    height: fit-content;
+    margin-bottom: 100px;
+    padding-left: 10%;
+}
+
+.sectionOneMainScreen {
+    min-height: 600px;
+    position: relative;
+}
+
+.sectionSecondMainScreen {
+    min-height: 400px;
+    position: relative;
+}
+
+.subSection {
+  margin-bottom: 100px;
+  padding: 0;
+}
+
+
+
+
+
+@keyframes fadeInFromLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInFromRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+      transformRL: scaleX(1);
+    }
+  }
+  
+
+.fade h1 {
+    opacity: 0;
+    animation: fadeInFromLeft 1s ease-in-out 1s forwards;
+}
+
+.fade h2 {
+    opacity: 0;
+    animation: fadeInFromRight 1s ease-in-out 1s forwards;
+}
+
+
+
+
+
+.RedLine::after {
+    content: '';
+    display: block;
+
+    height: 4px;
+    width: 100%;
+    margin-top: 10px;
+
+    background-color: rgb(255, 0, 0);
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transformRL 0.8s ease-in-out;
+}
+
+@keyframes showRedLine {
+    to {
+        transform: scaleX(1);
+    }
+}
+
+.fade h2.RedLine::after {
+    animation: showRedLine 1s 2s forwards;
+}
+
+
+
+
+
+
+
+ 
+.Text {
+    width: 90%;
+    top: 100px;
+    position: relative;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 18px;
+}
+
+.tekstWidth {
+  width: 40%;
+}
+
+.FloatRight {
+  width: 40%;
+  float: right;
+}
+
+
+.scroll-container {
+    margin-top: 60px;
+}
+
+.scroll-text {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 0.5s, transform 1.5s;
+}
+
+
+
+
+
+
+.navbar {
+    z-index: 10;
+
+    color: #000000;
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+
+    padding: 10px 20px;
+    width: 100%;
+    height: 85px;
+
+    position: fixed;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.258); /* Voeg een subtiele schaduw toe */
+}
+
+.navbarLeft {
+    margin-left: 9%;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-right: 10%;
+    justify-content: space-between;
+}
+
+.nav-item {
+    margin-right: 20px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.nav-item a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 8px 16px;
+}
+
+.nav-item a::after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: rgb(255, 0, 0);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+}
+
+.nav-item a:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-item a:focus::after {
+    transform: scaleX(1);
+}
+
+.nav-item-subtext {
+    font-size: 12px;
+    color: #494848;
+    display: block;
+}
+
+.nav-item:hover {
+    background: rgba(0, 0, 0, 0.048);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+
+
+
+
+
+
+
+
+/* sectie 3d */
+
+/* dit ga ik met p5.js doen */
+
+  
+
+
+/* tekst 2, foto's */
+
+section#tekst2 {
+  height: 2000px;
+  margin-bottom: 40%;
+}
+
+.img3Container {
+  height: 450px;
+  width: fit-content;
+  z-index: 9;
+
+  margin-top: 120px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+
+  float: right; /* Plaats de container rechts van de tekst */
+  margin-right: 10%;
+
+  position: relative;
+}
+
+.img3Container img {
+  height: 420px;
+  width: 250px;
+
+  object-fit: cover;
+  border-radius: 10px;
+  
+  cursor: pointer;
+  transition: 0.8s ease;
+  box-shadow:  20px 20px 60px #000000c3;
+  margin: 5px 15px;
+}
+
+.img3Container > img:not(:hover) {
+  scale: 0.9;
+  opacity: 0.55; /* Verlaag de opaciteit van alle afbeeldingen behalve de eerste */
+  width: 140px; /* Verklein de breedte van alle afbeeldingen behalve de eerste */
+}
+
+
+
+
+
+.P3tekst2 {
+  margin-top: 30px;
+}
+
+.DeKaartjes {
+  height: 700px;
+}
+
+.Kaartje {
+  top: 30px;
+  position: relative;
+
+  height: 100px;
+  width: 40%;
+  padding: 15px;
+
+  border-radius: 10px;
+  cursor: pointer;
+  
+  background: #fff3f3d8;
+  box-shadow:  20px 20px 30px #00000051;
+  transition: 1.5s ease;
+}
+
+.pfpKaartje {
+  height: 90px;
+  width: 60%;
+
+  padding: 5px;
+  padding-top: 10px;
+
+  border-radius: 10px;
+  box-shadow: inset 3px 3px 6px #666666,
+            inset -3px -3px 6px #0000001e;
+
+  justify-content: center;
+  text-align: center;
+
+  margin-bottom: 20px;
+}
+
+.pfpKaartje img {
+  height: 100%;
+  width: 100%;
+  scale: 1.5;
+  object-fit:contain;
+  border-radius: 36px;
+}
+
+#Kaartje2 {
+  margin-top: 100px;
+}
+
+.inhoudKaartje {
+  transition: 0.3s ease;
+  /* color: #00000000; */
+  opacity: 0;
+}
+
+.inhoudKaartje a {
+  transition: 0.3s ease;
+  text-decoration: none;
+  opacity: 0;
+}
+
+#Kaartje1:hover {
+  height: 300px;
+}
+
+#Kaartje2:hover {
+  height: 400px;
+}
+
+.Kaartje:hover .inhoudKaartje {
+  transition-delay: 1s;
+  color: black;
+  opacity: 1;
+}
+
+.Kaartje:hover .inhoudKaartje a{
+  transition-delay: 1s;
+  font-weight: bold;
+  color: #0943ff;
+  opacity: 1;
+}
+
+
+.P3tekst3 {
+  margin-top: 100px;
+}
+
+/* #img3Container2 {
+  margin-right: 290px;
+} */
+
+
+
+
+
+
+/* web en AI */
+
+
+section#tekst3 {
+  height: 1000px;
+  margin-top: 200px;
+}
+
+.KnoppenContainer {
+  margin-top: 100px;
+  margin-bottom: 20px;
+
+  height: 80px;
+
+  justify-content: space-between;
+
+  padding: 10px;
+
+  border-radius: 10px;
+  background: #00000007;
+
+  text-align: center;
+  display: flex;
+}
+
+button {
+  height: 80px;
+  min-width: calc(80%/4);
+  width: fit-content;
+
+  padding: 5px;
+
+  border-radius: 10px;
+  border: none;
+  box-shadow:  3px 3px 8px #66666693,
+             -3px -3px 8px #ffffff24;
+
+  text-align: center;
+  justify-content: center;
+  margin: 0;
+
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+button p {
+  float: right;
+  margin-right: 15%;
+}
+
+.buttonpfp {
+  height: 80%;
+  width: calc(100%/3);
+
+  border-radius: 10px;
+
+  margin: 0;
+  padding: 5px;
+}
+
+.buttonpfp img {
+  height: 100%;
+  width: 100%;
+
+  object-fit:contain;
+  mix-blend-mode:multiply;
+  border-radius: 10px;
+}
+
+.KnoppenContainer:hover > button:not(:hover) {
+  opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+
+
+/* Style the scrollbar for WebKit-based browsers */
+::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #01bcc0; /* Set the color of the thumb (scrollbar handle) */
+    /* border-radius: 3px; Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #13a3ff; /* Change the thumb color on hover */
+}
+
+/* Optional: Style the scrollbar track */
+::-webkit-scrollbar-track {
+    background-color: #00f9ff; /* Set the color of the track (background behind the thumb) */
+}
+
+/* Optional: Add shadows to the scrollbar thumb */
+::-webkit-scrollbar-thumb:active {
+    background-color: #13a3ff;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
