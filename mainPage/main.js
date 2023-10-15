@@ -1,16 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const textElements = document.querySelectorAll(".scroll-text");
+    const scrollTextElements = document.querySelectorAll(".scroll-text");
+    const glowTextElements = document.querySelectorAll(".glow");
 
     function onScroll() {
-        textElements.forEach((element) => {
+        scrollTextElements.forEach((element) => {
             const elementPosition = element.getBoundingClientRect().top;
             const windowHeight = window.innerHeight;
 
-            if (elementPosition < windowHeight * 0.80) {
-                element.style.opacity = "1";
-                element.style.transform = "translateY(0)";
+            if (elementPosition <= windowHeight * 0.70) {
+                element.classList.add("fade-in");
+            } else {
+                element.classList.remove("fade-in");
             }
         });
+
+        glowTextElements.forEach((element) => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (elementPosition <= windowHeight * 0.70) {
+                element.classList.add("h2glow");
+            } else {
+                element.classList.remove("h2glow");
+            }
+        });
+        
     }
 
     // Initial check when the page loads
@@ -19,6 +33,3 @@ document.addEventListener("DOMContentLoaded", function () {
     // Attach the event listener to scroll event
     window.addEventListener("scroll", onScroll);
 });
-
-
-
