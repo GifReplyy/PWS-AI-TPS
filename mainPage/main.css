@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: rgb(0, 8, 90);
+    background-color:rgb(0, 7, 75);
     color: white;
 
 }
@@ -31,21 +31,21 @@ section {
 
 .sectionSecondMainScreen {
   position: relative;
-  background: linear-gradient(180deg, rgb(0, 7, 75) 0%, rgb(0, 8, 90) 100%);
+  background-color:rgb(0, 7, 75);
 }
 
 section#tekst1 {
-  background-color: rgb(0, 8, 90);
+  background-color:rgb(0, 7, 75);
 
 }
 
 section#tekst2 {
-  background-color: rgb(0, 8, 90);
+  background-color:rgb(0, 7, 75);
 
 }
 
 section#tekst3 {
-  background-color: rgb(0, 8, 90);
+  background-color:rgb(0, 7, 75);
 
 }
 
@@ -96,33 +96,61 @@ section#tekst3 {
 
 
 
+.Line {
+  position: relative;
+  display: inline-block;
+  background-color: rgb(255, 255, 255);
+}
 
 .Line::after {
   content: '';
   display: block;
-  height: 4px;
-  width: 100%;
-  margin-top: 10px;
-  background-color: rgb(255, 255, 255);
+
+  top: 80px;
+  left: -70px;
+
+  height: 640px;
+  width: 4px; 
+  border-radius: 3px;
+
   box-shadow: 0px 2px 10px rgba(255, 255, 255, 1);
+  background-color: rgb(255, 255, 255);
 
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: showLine 0.8s ease-in-out;
+  transform-origin: top center;
+  transform: scaleY(0);
+  position: absolute;
+
 }
 
-@keyframes showLine {
-  to {
-      transform: scaleX(1);
-  }
+.LineANIME::after {
+  transform: scaleY(1);
+  transition: 4s ease-out;
 }
 
-.fade h2.Line::after {
-  animation: showLine 1s 2s forwards;
+#line1 {
+  top: 50px;
+  transition: 6s ease-out;
 }
 
+#line2 {
+  top: 70px;
+  transition: 6s ease-out;
+}
 
+#line3 {
+  top: 60px;
+  transition: 6s ease-out;
+}
 
+#line3-1 {
+  top: -90px;
+  transition: 6s ease-out;
+}
+
+#line3-2 {
+  top: 50px;
+  transition: 6s ease-out;
+}
 
 
 
@@ -195,6 +223,7 @@ p {
 
 
 .navbar {
+    background-color: rgba(255, 255, 255, 0.070);
     z-index: 10;
 
     color: #ffffff;
@@ -203,7 +232,7 @@ p {
 
     padding: 10px 20px;
     width: 100%;
-    height: 85px;
+    height: 75px;
 
     position: fixed;
     bottom: 0;
@@ -254,6 +283,7 @@ p {
     width: 100%;
     background-color: #ffffff;
     box-shadow: 0px 2px 10px rgba(255, 255, 255, 1);
+    border-radius: 3px;
 
     transform: scaleX(0);
     transform-origin: left;
@@ -336,7 +366,7 @@ p {
 
 
 .P3tekst2 {
-  margin-top: 30px;
+  margin-top: -150px;
 }
 
 .DeKaartjes {
@@ -423,11 +453,11 @@ p {
 
 
 .P3tekst3 {
-  margin-top: 150px;
+  margin-top: 0px;
 }
 
 #img3Container2 {
-  margin-top: 150px;
+  margin-top: 200px;
 }
 
 
