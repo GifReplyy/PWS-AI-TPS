@@ -5,9 +5,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color:rgb(0, 7, 75);
+    background-color:rgb(0, 6, 60);
     color: white;
-
 }
 
 
@@ -24,29 +23,26 @@ section {
 .sectionOneMainScreen {
   text-shadow: 0px 2px 30px rgba(255, 255, 255, 1);
   color: white;
-  background: linear-gradient(180deg, rgb(0, 3, 31) 50%, rgb(0, 5, 47) 75%, rgb(0, 7, 75) 100%);
+  background: linear-gradient(180deg, rgb(0, 3, 31) 50%, rgb(0, 5, 47) 75%, rgb(0, 6, 60) 100%);
   position: relative;
   margin-bottom: 0;
 }
 
 .sectionSecondMainScreen {
   position: relative;
-  background-color:rgb(0, 7, 75);
+  background-color:rgb(0, 6, 60);
 }
 
 section#tekst1 {
-  background-color:rgb(0, 7, 75);
-
+  background-color:rgb(0, 6, 60);
 }
 
 section#tekst2 {
-  background-color:rgb(0, 7, 75);
-
+  background-color:rgb(0, 6, 60);
 }
 
 section#tekst3 {
-  background-color:rgb(0, 7, 75);
-
+  background-color:rgb(0, 6, 60);
 }
 
 .subSection {
@@ -113,7 +109,7 @@ section#tekst3 {
   width: 4px; 
   border-radius: 3px;
 
-  box-shadow: 0px 2px 10px rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
   background-color: rgb(255, 255, 255);
 
   transform-origin: top center;
@@ -125,38 +121,97 @@ section#tekst3 {
 .LineANIME::after {
   transform: scaleY(1);
   transition: 4s ease-out;
+  position: absolute;
 }
+
+
+
 
 #line1 {
   top: 50px;
   transition: 6s ease-out;
+  transform: scaleY(0.90);
+  .lineImage {
+    transform: scaleY(1.1);
+  }
 }
 
 #line2 {
-  top: 70px;
+  top: 50px;
   transition: 6s ease-out;
+  transform: scaleY(1.025);
+  .lineImage {
+    transform: scaleY(1);
+  }
 }
 
 #line3 {
-  top: 60px;
-  transition: 6s ease-out;
-}
-
-#line3-1 {
-  top: -90px;
-  transition: 6s ease-out;
-}
-
-#line3-2 {
   top: 50px;
   transition: 6s ease-out;
 }
 
+#line3-1 {
+  top: -120px;
+  transition: 6s ease-out;
+  transform: scaleY(1.275);
+  .lineImage {
+    transform: scaleY(0.825);
+  }
+}
+
+#line3-2 {
+  top: 30px;
+  transition: 6s ease-out;
+  transform: scaleY(1.2);
+  .lineImage {
+    transform: scaleY(0.8);
+  }
+}
+
+#line4 {
+  top: 40px;
+  transition: 6s ease-out;
+  transform: scaleY(1.65);
+  .lineImage {
+    transform: scaleY(0.65);
+  }
+}
+
+#line5 {
+  top: 50px;
+  transition: 6s ease-out;
+}
+
+
+
+.lineImage {
+  height: 40px;
+  width: 40px;
+
+  border-radius: 5px;
+  border: 4px solid #ffffff;
+  box-shadow: 0px 0px 50px rgba(255, 255, 255, 1);
+
+  top: -10px;
+  left: -90px;
+  position: absolute;
+
+  opacity: 0;
+  transition: opacity 1s;
+
+  transform: scaleY(1);
+}
+
+.lineImage-fade-in {
+  opacity: 1;
+  transition: opacity 1.5s;
+}
 
 
 
 
  
+
 .Text {
     width: 80%;
     top: 100px;
@@ -172,6 +227,8 @@ h1 {
     font-size: 5rem;
 }
 
+/* ---------------------------------- */
+
 h2 {
     font-size: 3rem;
 }
@@ -186,6 +243,8 @@ h2 {
     text-shadow: 0px 2px 30px rgba(255, 255, 255, 1);
     transition: 2s ease;
 }
+
+/* ---------------------------------- */
 
 p {
     font-size: 18px;
@@ -223,7 +282,7 @@ p {
 
 
 .navbar {
-    background-color: rgba(255, 255, 255, 0.070);
+    background-color: rgba(255, 255, 255, 0.15);
     z-index: 10;
 
     color: #ffffff;
@@ -256,7 +315,7 @@ p {
     margin: 0;
     padding: 0;
     display: flex;
-    margin-right: 10%;
+    margin-right: 11%;
     justify-content: space-between;
 }
 

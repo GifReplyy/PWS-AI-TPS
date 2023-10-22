@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const scrollTextElements = document.querySelectorAll(".scroll-text");
     const glowTextElements = document.querySelectorAll(".glow");
     const lineTextElements = document.querySelectorAll(".Line");
+    const lineImageTextElements = document.querySelectorAll(".lineImage");
+
 
     function onScroll() {
 
@@ -9,10 +11,21 @@ document.addEventListener("DOMContentLoaded", function () {
             const elementPosition = element.getBoundingClientRect().top;
             const windowHeight = window.innerHeight;
 
-            if (elementPosition <= windowHeight * 0.70) {
+            if (elementPosition <= windowHeight * 0.58) {
                 element.classList.add("fade-in");
             } else {
                 element.classList.remove("fade-in");
+            }
+        });
+
+        lineImageTextElements.forEach((element) => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (elementPosition <= windowHeight * 0.60) {
+                element.classList.add("lineImage-fade-in");
+            } else {
+                element.classList.remove("lineImage-fade-in");
             }
         });
 
@@ -20,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const elementPosition = element.getBoundingClientRect().top;
             const windowHeight = window.innerHeight;
 
-            if (elementPosition <= windowHeight * 0.70) {
+            if (elementPosition <= windowHeight * 0.60) {
                 element.classList.add("h2glow");
             } else {
                 element.classList.remove("h2glow");
@@ -31,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const elementPosition = element.getBoundingClientRect().top;
             const windowHeight = window.innerHeight;
 
-            if (elementPosition <= windowHeight * 0.70) {
+            if (elementPosition <= windowHeight * 0.60) {
                 element.classList.add("LineANIME");
             } else {
                 element.classList.remove("LineANIME");
