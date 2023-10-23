@@ -59,3 +59,59 @@ document.addEventListener("DOMContentLoaded", function () {
     // Attach the event listener to scroll event
     window.addEventListener("scroll", onScroll);
 });
+
+// Selecteer de knoppen en de inhoudselementen
+const btnBenefits = document.getElementById('btnBenefits');
+const btnCons = document.getElementById('btnCons');
+const btnFear = document.getElementById('btnFear');
+const btnImpact = document.getElementById('btnImpact');
+
+const benefitsContent = document.getElementById('benefitsContent');
+const consContent = document.getElementById('consContent');
+const fearContent = document.getElementById('fearContent');
+const impactContent = document.getElementById('impactContent');
+
+// Voeg klikgebeurtenissen toe aan de knoppen
+btnBenefits.addEventListener('click', () => {
+    // Verberg alle inhoudselementen
+    hideAllContent();
+    // Toon de gewenste inhoud
+    benefitsContent.style.display = 'block';
+});
+
+btnCons.addEventListener('click', () => {
+    hideAllContent();
+    consContent.style.display = 'block';
+});
+
+btnFear.addEventListener('click', () => {
+    hideAllContent();
+    fearContent.style.display = 'block';
+});
+
+btnImpact.addEventListener('click', () => {
+    hideAllContent();
+    impactContent.style.display = 'block';
+});
+
+// Functie om alle inhoudselementen te verbergen
+function hideAllContent() {
+    benefitsContent.style.display = 'none';
+    consContent.style.display = 'none';
+    fearContent.style.display = 'none';
+    impactContent.style.display = 'none';
+}
+
+// Verberg alle inhoudselementen bij het laden van de pagina
+hideAllContent();
+
+
+
+
+const mouseGlow = document.querySelector(".mouseEffect");
+
+mouseGlow.addEventListener("mousemove", (e) => {
+  const { x, y } = mouseGlow.getBoundingClientRect();
+  mouseGlow.style.setProperty("--x", e.clientX - x);
+  mouseGlow.style.setProperty("--y", e.clientY - y);
+});
